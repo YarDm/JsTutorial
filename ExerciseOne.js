@@ -17,10 +17,10 @@ function toDEC( dec ) {
             bit <<= 1;
         }
         else
-            out = undefined;
+            return Undefined;
         
     }
     return out;
 }
-console.log(toDEC('0111011101101'));
+console.log(toDEC('1111'));
 
