@@ -120,7 +120,7 @@ DoublyList.prototype.sum = function(doubList){
   let result = new DoublyList();
   if (this._length === doubList._length){
       for (let i = 1; i<= this._length; i++){
-          let newNode = this.searchNodeAt(i)+doubList.searchNodeAt(i);
+          let newNode = this.searchNodeAt(i).data+doubList.searchNodeAt(i).data;
           result.add(newNode);
       }
       result.show();
@@ -135,13 +135,13 @@ let dl1 = new DoublyList();
 dl1.add(5);
 dl1.add(7);
 dl1.add(3);
-dl1.show();
+//dl1.show();
 
 let dl2 = new DoublyList();
 dl2.add(6);
 dl2.add(8);
 dl2.add(2);
-dl2.show();
+//dl2.show();
 
 dl1.sum(dl2);
 
