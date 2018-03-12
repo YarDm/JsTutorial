@@ -116,10 +116,32 @@ DoublyList.prototype.show = function(){
 };
 
 //complete method to summ two linked lists
+DoublyList.prototype.sum = function(doubList){
+  let result = new DoublyList();
+  if (this._length === doubList._length){
+      for (let i = 1; i<= this._length; i++){
+          let newNode = this.searchNodeAt(i)+doubList.searchNodeAt(i);
+          result.add(newNode);
+      }
+      result.show();
+  } else {
+      console.log("введите равное количество значений в список");
+  }
+  
+};
+
 
 let dl1 = new DoublyList();
 dl1.add(5);
 dl1.add(7);
 dl1.add(3);
 dl1.show();
+
+let dl2 = new DoublyList();
+dl2.add(6);
+dl2.add(8);
+dl2.add(2);
+dl2.show();
+
+dl1.sum(dl2);
 
